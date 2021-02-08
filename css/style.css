@@ -25,8 +25,12 @@ body {
   display: grid;
   gap: 1rem;
 }
+.grid-two{
+  display: grid;
+  grid-template-columns: 1fr
+}
 .grid.container-bg {
-  margin: 1rem;
+  margin: 2rem;
 }
 .container-bg {
   width: 100%;
@@ -48,7 +52,7 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 60px;
+  height: 2rem;
   margin-right: 1rem;
 }
 .barra-banner .button {
@@ -202,13 +206,43 @@ body {
   padding: 0.5rem;
   width: 100%;
   background-color: var(--bg-details);
+  height: 150px;
+  overflow: auto;
+  font-size: 1rem;
 }
+.summary:hover{
+  background-color: #e4e4e4;
+  color: #051925;
+}
+/* Scroll de summary */
+.summary::-webkit-scrollbar{
+  width: 5px;
+}
+.summary::-webkit-scrollbar-track{
+  background-color: #aaa;
+  border-radius: 10px;
+}
+.summary::-webkit-scrollbar-thumb{
+  background-color: #000;
+  border-radius: 10px;
+  padding: 2px solid #aaaa;
+}
+.summary::-webkit-scrollbar-thumb:hover,
+.summary::-webkit-scrollbar-thumb:active{
+  background-color: #141618;
+}
+
 .summary p {
   font-size: 1rem;
 }
 @media screen and (min-width: 1028px) {
   .grid {
     grid-template-columns: 1fr 1fr;
+  }
+  .grid-two{
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
   }
   .grid.container-bg {
     margin: 5rem;
