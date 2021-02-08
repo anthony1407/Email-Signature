@@ -1,0 +1,226 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --color-primary: #051925;
+  --color-secundary: #1d3557;
+  --bg-container: #fcfcfc;
+  --bg-details: #f5f5f5;
+  --bg-detailer-hover: #e4e4e4;
+  --box-shadow: 0 0 3rem 0 rgb(0, 0, 0);
+}
+body {
+  font-family: "Cinzel";
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+.grid.container-bg {
+  margin: 1rem;
+}
+.container-bg {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--bg-container);
+  box-shadow: var(--box-shadow);
+}
+
+.container-img {
+  height: 6rem;
+  position: relative;
+}
+
+.barra-banner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60px;
+  margin-right: 1rem;
+}
+.barra-banner .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+.barra-banner svg {
+  font-size: 1.2rem;
+  color: var(--color-secundary);
+  opacity: 0.5;
+}
+.container-img .container-logo {
+  background-color: var(--color-primary);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.container-logo .logo {
+  width: 150px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  clip-path: circle(70px);
+}
+.container-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-details {
+  display: grid;
+  grid-template-rows: 70px auto 70px;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+.details-information {
+  position: relative;
+}
+.details-information::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  bottom: 5px;
+  position: absolute;
+  background-color: var(--color-primary);
+}
+.details-information-three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-details .details-information {
+  color: var(--color-primary);
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.container-details .details-information h2 {
+  font-size: 1.5rem;
+}
+.container-details .details-information p {
+  font-size: 1rem;
+}
+.details-information-two {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.details-information-two a {
+  color: var(--color-secundary);
+  text-decoration: none;
+}
+
+.details-information a:hover {
+  color: #000;
+}
+.bg-details {
+  background-color: var(--bg-details);
+  color: var(--color-secundary);
+  padding: 0.5rem;
+  font-weight: 600;
+  border-radius: 1.25rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  height: auto;
+}
+.bg-details:hover {
+  background-color: var(--bg-detailer-hover);
+}
+.bg-details .icon,
+.social .icon {
+  width: 2rem;
+  height: 2rem;
+  background-color: #051925;
+  border-radius: 100%;
+  position: relative;
+  margin-right: 1rem;
+}
+.bg-details .icon svg,
+.social .icon svg {
+  color: #fcfeff;
+  font-size: 0.7rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.social .icon {
+  cursor: pointer;
+}
+
+.social {
+  display: flex;
+}
+.social .icon:hover {
+  background-color: var(--bg-detailer-hover);
+}
+.social .icon:hover svg {
+  color: var(--color-primary);
+}
+.details-photos {
+  display: none;
+}
+.banner {
+  width: 80%;
+  margin: auto;
+}
+.active {
+  display: none;
+}
+.active-banner {
+  display: block;
+}
+.details-photos img {
+  width: 100%;
+  object-fit: cover;
+}
+.summary {
+  padding: 0.5rem;
+  width: 100%;
+  background-color: var(--bg-details);
+}
+.summary p {
+  font-size: 1rem;
+}
+@media screen and (min-width: 1028px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid.container-bg {
+    margin: 5rem;
+  }
+  .container-logo .logo {
+    width: 270px;
+    clip-path: circle();
+  }
+  .container-img {
+    height: 100%;
+  }
+  .details-information-two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
