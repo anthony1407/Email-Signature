@@ -5,3 +5,7 @@
 - Cuenta con sus respectiva imágenes y logos 
 
 # Diseño de firma de correo electónico 
+
+**Vista del formulario**
+
+https://www.behance.net/gallery/113060643/Email-Signature
